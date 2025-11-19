@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgb(37, 37, 37);
+
+}
+.container{
+    width: 80vw;
+    margin: 100px auto;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    border-radius: 10px;
+
+}
+.img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+.img .img-box{
+    max-width: 45vw;
+    max-height: 65vh;
+    padding: 5px;
+    border: 2px rgb(128, 124, 124) dashed;
+    overflow: hidden;
+
+}
+.img .img-box img, #canvas{
+    max-width: 100%;
+    rotate: 0deg;
+}
+
+.upload{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 80px;
+}
+.upload input{
+    display: none;
+}
+.upload label{
+    padding: 10px 20px;
+    border: 2px #000 dashed;
+    color:#000;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+}
+.upload label:hover{
+    background-color:rgb(223, 220, 220) ;
+}
+#rotate{
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: 0.3s ease-in-out;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+#rotate:hover{
+    background-color: rgb(223, 220, 220);
+}
+.filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap:30px ;
+    padding: 50px;
+}
+.filters ul, .filters ul li{
+    display: flex;
+    direction: rtl;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+.filters ul li input{
+    color: rgb(2, 48, 90);
+}
+.action{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.action a{
+    text-decoration: none;
+}
+.action a, .action span{
+    background-color: blue;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.action a:hover, .action span:hover{
+    background-color: rgb(48, 48, 253);
+
+}
+@media (max-width:768px){
+    .container{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    .img .img-box{
+        max-width: 80vw;
+    }
+    .img {
+        padding: 20px;
+    }
+
+}
